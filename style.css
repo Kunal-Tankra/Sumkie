@@ -1,0 +1,1576 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Hubballi", cursive;
+  /* font-family: 'Fredoka', sans-serif; */
+  text-transform: capitalize;
+}
+
+span::selection{
+  background-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* body {
+  background-color: rgba(0, 0, 0, 0.356) ;
+  
+} */
+
+/* go to top with this */
+.goToTop {
+  /* border: solid 1px greenyellow; */
+
+  position: fixed;
+  top: 80%;
+  left: 92%;
+  transition: 0.5s;
+  opacity: 0;
+  display: none;
+  z-index: 200;
+}
+
+.goToTop img {
+  /* border: solid 1px rgb(161, 47, 255); */
+  position: absolute;
+  top: 0;
+  width: 60px;
+}
+
+/* top buy now section */
+
+.topBuyNow {
+  background: rgb(34, 34, 34);
+  height: 55px;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  z-index: 1000;
+}
+
+.topBuyNow img {
+  width: 153px;
+}
+
+.topBuyNow button {
+  height: 34px;
+  width: 95px;
+  border-radius: 5px;
+  background-color: #82b440;
+  box-shadow: 0px 2px #5b7e2d;
+  transition: 0.1s;
+  border-style: none;
+}
+.topBuyNow button:active {
+  transform: translateY(1px);
+  box-shadow: 0px 0px;
+}
+
+.topBuyNow a {
+  text-decoration: none;
+  font-size: 15px;
+  color: white;
+  font-weight: 500;
+}
+
+/* red line of offers */
+.offer {
+  background-color: #ed0f0f;
+  height: 40px;
+  text-align: center;
+  position: relative;
+}
+
+.offer p {
+  font-family: "Jost", sans-serif;
+  color: rgb(255, 255, 255);
+  text-transform: capitalize;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15px;
+}
+
+/* navigationi bar  */
+.navigationBar {
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: -45px;
+  display: flex;
+  height: 100px;
+  padding-left: 60px;
+  padding-right: 60px;
+  transition: 0.5s;
+  z-index: 100;
+}
+
+/* making class for show shadow of navigationbar */
+.shadowForNavigationBar {
+  box-shadow: 0px 2px 15px 0px grey;
+}
+
+.navigationContent {
+  display: flex;
+  justify-content: space-between;
+  width: 750px;
+  height: 45px;
+  position: relative;
+}
+
+.navigationContent a {
+  font-family: "Hubballi", cursive;
+  font-size: 17px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 15px;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  text-transform: capitalize;
+  letter-spacing: 0.3px;
+  transition: 0.5s;
+  transform-origin: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.navigationContent a:hover {
+  color: white;
+}
+
+.redBackground {
+  background-color: #f11c1c;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  z-index: -100;
+  transition: 0.5s;
+}
+
+.navigationContent a:hover .redBackground {
+  left: 0%;
+}
+
+.icons {
+  width: 190px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.icons span {
+  font-size: 28px;
+  color: black;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.icons span:hover {
+  color: #f11c1c;
+}
+
+#searchContainer {
+  border: solid rgb(204, 201, 201) 2px;
+  background-color: white;
+  position: absolute;
+  right: 84%;
+  top: 150%;
+  width: 0px;
+  height: 0px;
+  display: flex;
+  align-items: center;
+  transition: 0.5s;
+  transform-origin: right top;
+  overflow: hidden;
+  transform: scale(0, 0);
+}
+
+.searchBox {
+  border: transparent;
+  outline: none;
+  height: 100%;
+  width: 215px;
+  margin-left: 10px;
+}
+
+/* making a id for block or none a display property */
+#cross {
+  display: none;
+}
+
+/* hover on sunglasses and get this */
+#allSunglasses {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 164%;
+  height: 342px;
+  width: 650px;
+  padding: 0px 20px;
+  padding-top: 30px;
+  transition: 0.8s;
+  transform-origin: left top;
+  transform: rotateX(90deg);
+  opacity: 0;
+}
+
+#sunglasses:hover ~ #allSunglasses,
+#allSunglasses:hover {
+  transform: rotateX(0deg);
+  opacity: 1;
+}
+
+.aviatorGoggles a,
+.classicGoggles a {
+  padding: 0;
+  margin: 10px 0px;
+}
+.aviatorGoggles h4,
+.classicGoggles h4 {
+  width: 100%;
+
+  font-size: 17px;
+  font-weight: 0;
+}
+
+.aviatorGoggles h4:hover,
+.classicGoggles h4:hover {
+  color: #f11c1c;
+}
+
+#allSunglasses img {
+  height: 250px;
+}
+
+.headingOfGlasses {
+  color: #f11c1c;
+}
+
+.headingOfGlassesUnderline {
+  border-top: black solid 1px;
+  width: 100px;
+  height: 0px;
+}
+
+/* slider is here */
+.slider {
+  width: 100%;
+  height: 545px;
+  position: relative;
+  overflow: hidden;
+}
+
+.sliderImages {
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  position: relative;
+}
+
+#girsImage {
+  background-image: url("images/sliderImages/girs.jpg");
+  transition: 0.5s;
+  opacity: 1;
+}
+
+#boyImage {
+  background-image: url("images/sliderImages/man.jpg");
+  display: none;
+  transition: 0.5s;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+}
+
+.sliderContainerForHeadings {
+  position: absolute;
+  top: 18%;
+  left: 57%;
+  right: 5%;
+}
+
+#headingInSliderBoy {
+  left: 80px;
+  opacity: 0;
+}
+
+.headingInSlider {
+  font-size: 49px;
+  letter-spacing: 1px;
+  position: relative;
+  left: 0px;
+  transition: 0.9s;
+  transition-delay: 0.1s;
+}
+
+#subHeadingInSliderBoy {
+  left: 80px;
+  opacity: 0;
+}
+
+.subHeadingInSlider {
+  font-size: 22px;
+  margin-top: 20px;
+  margin-bottom: 70px;
+  position: relative;
+  left: 0px;
+  transition: 0.9s;
+  transition-delay: 0.4s;
+}
+
+.uniqueColor {
+  color: #ed0f0f;
+}
+
+.shopNowInSlider {
+  text-decoration: none;
+  position: relative;
+}
+
+#shopNowDivInSliderBoy {
+  opacity: 0;
+  transform: scaleY(0);
+}
+
+.shopNowDivInSlider {
+  z-index: 1;
+  background-color: #ed0f0f;
+  position: absolute;
+  top: 0%;
+  height: 48px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+
+  transition: 0.8s;
+  transform-origin: bottom;
+  transition-delay: 0.6s;
+}
+
+.forBackgroundBlack {
+  z-index: -1;
+  height: 100px;
+  width: 350px;
+  background-color: black;
+  position: absolute;
+  top: -83px;
+  left: 24%;
+  transform: rotate(20deg);
+  transition: 0.7s;
+  opacity: 0;
+}
+
+.shopNowDivInSlider:hover .forBackgroundBlack {
+  top: -12px;
+  left: -39%;
+  opacity: 1;
+}
+
+.dotsForSLide {
+  background-color: white;
+  height: 12px;
+  width: 12px;
+  position: absolute;
+  bottom: 10px;
+  cursor: pointer;
+}
+
+.radioForSlide {
+  display: none;
+  position: absolute;
+  top: 5%;
+  left: 10%;
+}
+
+#labelForWomenSlide {
+  left: 50%;
+  transition: 0.5s ease-in-out;
+  background-color: #ed0f0f;
+}
+
+#labelForMenSlide {
+  left: 51.4%;
+  transition: 0.5s ease-in-out;
+}
+
+/* slider arrows */
+
+.arrowsOfSlider {
+  /* border: solid red 3px; */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.arrowsOfSlider:hover {
+  color: #ed0f0f;
+}
+
+#leftArrowOfSlider {
+  font-size: 65px;
+  left: -1%;
+  opacity: 0;
+}
+
+#rightArrowOfSlider {
+  font-size: 65px;
+  right: -1%;
+  opacity: 0;
+}
+
+/* hover on slider and get arrows */
+#slider:hover #leftArrowOfSlider {
+  left: 3%;
+  opacity: 1;
+}
+
+#slider:hover #rightArrowOfSlider {
+  right: 3%;
+  opacity: 1;
+}
+
+/* sales and discount div */
+.sales {
+  display: flex;
+  justify-content: space-between;
+  padding: 110px 55px;
+  position: relative;
+}
+
+.saleUpto {
+  height: 850px;
+  position: relative;
+}
+
+.saleUpto:hover .divForImageOfSale img {
+  transform: scale(1.05);
+}
+
+.divForImageOfSale {
+  overflow: hidden;
+  width: 100%;
+  height: 78%;
+}
+
+.divForImageOfSale img {
+  width: 100%;
+  transition: 0.7s;
+}
+
+#saleUpto20 {
+  transform: translateY(100px);
+  margin-bottom: 85px;
+}
+
+.subheadingOfDiscount {
+  margin-top: 20px;
+  font-size: 25px;
+}
+
+.saleUpto h2 {
+  margin-top: 10px;
+  font-size: 36px;
+  margin-bottom: 38px;
+}
+
+.saleUpto a {
+  text-decoration: none;
+  color: #ed0f0f;
+  font-weight: 500;
+  transition: 0.8s;
+}
+
+.saleUpto a:hover {
+  color: black;
+}
+
+.underlineOfShopNowinDiscount {
+  border-top: solid 2px #ed0f0f;
+  width: 93px;
+  transition: 0.5s;
+}
+
+.saleUpto a:hover + .underlineOfShopNowinDiscount {
+  display: none;
+  border-color: black;
+}
+
+/* another companys logos are here to design */
+.anotherCompanyLogosDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 290px;
+  position: relative;
+}
+
+.containerForAllAnotherCompanyLogos {
+  border-top: rgba(184, 184, 184, 0.808) solid 1px;
+  border-bottom: rgba(184, 184, 184, 0.801) solid 1px;
+  height: 100%;
+  width: 92%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.smallContainerOfAnotherCompanyLogo {
+  position: relative;
+  left: 0;
+  padding: 0 21.6px;
+  transition: 0.8s ease-in-out;
+}
+
+.anotherCompanyLogo {
+  display: flex;
+  align-items: center;
+}
+
+.smallContainerOfAnotherCompanyLogo:hover .anotherCompanyLogo {
+  animation: logoAnimation 1.3s ease-in-out 1;
+}
+
+/* animation like spring on hover on logos */
+@keyframes logoAnimation {
+  0% {
+    transform: scale(0.1);
+  }
+
+  20% {
+    transform: scale(1);
+  }
+
+  34% {
+    transform: scale(0.8);
+  }
+
+  51% {
+    transform: scale(1);
+  }
+
+  68% {
+    transform: scale(0.8);
+  }
+
+  92% {
+    transform: scale(1);
+  }
+}
+
+span.anotherCompanyLogosArrows {
+  font-weight: 600;
+  font-size: 28px;
+  margin: 0 15px;
+  opacity: 0;
+  transition: 0.6s;
+  cursor: pointer;
+  border: solid 1px black;
+}
+
+.anotherCompanyLogosDiv:hover span.anotherCompanyLogosArrows {
+  opacity: 1;
+}
+
+/* new products style are here */
+
+.headingNewProducts {
+  margin-top: 100px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.headingNewProducts h1 {
+  font-size: 38px;
+}
+
+.underLineOfNewProductsHeading {
+  border-top: solid 2px #ed0f0f;
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 8px;
+}
+
+/* all nuw products */
+
+.newProducts {
+  height: 540px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+span.newProductsArrows {
+  font-weight: 600;
+  font-size: 28px;
+  margin: 0 15px;
+
+  transition: 0.6s;
+  cursor: pointer;
+  border: solid 1px black;
+}
+
+.biggerContainerForAllNewProducts{
+  /* border: solid 1px black; */
+  width: 92%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+
+
+.containerForAllNewProducts {
+  /* border: solid 1px greenyellow; */
+  height: 100%;
+  position: absolute;
+  left: 0;
+  /* right: 300px; */
+  display: flex;
+  transition: .5s;
+}
+
+/* small container */
+.smallContainerOfNewProducts {
+  padding: 10.5px;
+  transition: 0.2s ease-out;
+}
+
+.imagecontainerOfNewProducts {
+  height: 370px;
+  width: 326px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.imagecontainerOfNewProducts img {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.secondImageForslide {
+  left: -100%;
+  opacity: 0;
+  transition: 0.6s;
+}
+
+.smallContainerOfNewProducts:hover .secondImageForslide {
+  left: 0;
+  opacity: 1;
+  transition-delay: 0.1s;
+}
+
+/* icons under image of goggles */
+.iconsUnderNewProducts {
+  height: 200px;
+  width: auto;
+  position: absolute;
+  bottom: 3%;
+  right: 2%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.iconsUnderNewProducts span {
+  font-size: 20px;
+  font-weight: 100;
+  background-color: white;
+  cursor: pointer;
+  padding: 12px;
+  transition: 0.3s;
+  transform-origin: right;
+  transform: rotateY(90deg);
+}
+
+.smallContainerOfNewProducts:hover .iconsUnderNewProducts span {
+  transform: rotateY(0deg);
+  transition-delay: 0;
+}
+
+.smallContainerOfNewProducts:hover span.delay1 {
+  transition-delay: 0.3s;
+}
+.smallContainerOfNewProducts:hover span.delay2 {
+  transition-delay: 0.4s;
+}
+.smallContainerOfNewProducts:hover span.delay3 {
+  transition-delay: 0.5s;
+}
+.smallContainerOfNewProducts:hover span.delay4 {
+  transition-delay: 0.6s;
+}
+
+.smallContainerOfNewProducts span.iconOfNewProducts:hover {
+  color: #ed0f0f;
+  transition: none;
+  transition-delay: none;
+}
+
+/* sale tag with price */
+.salePriceTag {
+  background-color: #ed0f0f;
+  position: absolute;
+  top: 3%;
+  left: 3%;
+  padding: 1px 7px;
+}
+
+.salePriceTag p {
+  color: white;
+  font-size: 15px;
+}
+
+.salePriceTagTriangle {
+  background-color: #ed0f0f;
+  width: 12px;
+  height: 10px;
+  position: absolute;
+  top: 100%;
+  clip-path: polygon(100% 0, 0 0, 0 100%);
+}
+
+.onSale {
+  position: absolute;
+  right: 3%;
+  top: 3%;
+  background-color: #222;
+  padding: 1px 7px;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.smallContainerOfNewProducts:hover .onSale {
+  opacity: 1;
+}
+
+.onSale p {
+  color: white;
+}
+
+/* stars */
+.ratingStars {
+  margin-top: 13px;
+  margin-bottom: 8px;
+}
+
+.ratingStars span {
+  color: #ccc;
+  font-size: 16px;
+  margin-right: -5px;
+}
+
+/* making class for yellow star */
+.ratingStars .yellowStar {
+  color: #ffb400;
+}
+
+.ProductType {
+  text-decoration: none;
+
+  font-size: 16px;
+  color: #000;
+}
+
+.ProductType:hover {
+  color: #ed0f0f;
+}
+
+.priceOfProduct {
+  display: flex;
+  margin-top: 12px;
+}
+
+.cutPrice {
+  position: relative;
+  margin-right: 13px;
+}
+
+.cutLine {
+  border-top: solid 2px black;
+  position: absolute;
+  top: 45%;
+  width: 100%;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ed0f0f;
+}
+
+.circles {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  width: 19%;
+}
+
+.circle {
+  border: solid 1px #aaa;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  transition-delay: 0.1s;
+}
+
+.circle:hover {
+  border-color: #000;
+}
+
+/* making classes for color of circles */
+.redCircle {
+  background-color: #e84c3d;
+}
+
+.blueCircle {
+  background-color: #5d9cec;
+}
+
+.greenCircle {
+  background-color: #a0d468;
+}
+
+.whiteCircle {
+  background-color: #ffffff;
+}
+
+.brownCircle {
+  background-color: #cfc4a6;
+}
+
+.orangeCircle {
+  background-color: #f39c11;
+}
+
+.yellowCircle {
+  background-color: #f1c40f;
+}
+
+/* offer BAnner */
+.offerBanner {
+  background-image: url("images/offerBanner/offer-banner.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 400px;
+  width: 92%;
+  margin: 40px auto 0;
+  position: relative;
+}
+
+.offerBanner h1 {
+  position: absolute;
+  top: 22%;
+  right: 5%;
+  left: 60%;
+  font-size: 40px;
+  letter-spacing: 1px;
+  line-height: 54px;
+}
+
+.offerBanner a{
+  background-color: #ed0f0f;
+  position: absolute;
+  left: 60%;
+  top: 70%;
+  text-decoration: none;
+  color: white;
+  padding: 13px 21px;
+  transition: .6s;
+}
+
+.offerBanner a:hover{
+  background-color: black;
+}
+
+/* service */
+
+.services{
+  border-bottom: solid 2px gainsboro;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 230px;
+  width: 92%;
+  margin: 0 auto;
+}
+
+.service{
+  /* border: solid 1px black; */
+  width: 25%;
+  display: flex;
+  align-items: center;
+}
+
+.service svg{
+  margin-right: 5px;
+  margin-left: 30px;
+  margin-right: 20px;
+}
+
+.serviceLogo{
+  fill: black;
+  transition: .9s;
+}
+
+.service:hover .serviceLogo{
+  fill: #ed0f0f;
+
+}
+
+.service:hover .svgForService{
+  fill: #ed0f0f;
+  animation: logoAnimation 1.3s ease-in-out 1;
+
+}
+
+
+.servicetag h4{
+  font-size: 18px;
+  margin-bottom: 7px;
+}
+
+.service:hover h4{
+  color: #ed0f0f;
+}
+
+.servicetag p{
+  color: #000;
+  font-weight: 100;
+}
+
+.lineBetweenService{
+  height: 48px;
+  border-right: 2px solid gainsboro;
+}
+
+/* team box */
+
+.teamContainer{
+  background-color: #f5f4f2;
+  width: 92%;
+  height: 460px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin-bottom: 100px; */
+  
+}
+  
+
+
+img.quotesInTeamBox{
+  width: 5%;
+  margin-top: 4%;
+}
+
+.peraForTeamMembers{
+  width: 76%;
+  height: 68px;
+  position: relative;
+  margin-top: 2%;
+}
+
+.peraForTeamMember{
+  position: absolute;
+  top: 0;
+
+  color: rgb(121, 121, 121);
+  text-align: center;
+  word-spacing: 2px;
+  line-height: 30px;
+  opacity: 0;
+  transition: .5s;
+  transition-delay: .1s;
+  text-transform: initial;
+
+
+}
+
+/* team images */
+
+.imagesOfTeamMembers{
+  /* border: solid 1px black; */
+  margin-top: 1%;
+  width: 25%;
+  height: 114px;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.smallBoxOfImagesOfTeamMembers{
+  /* border: solid 1px greenyellow; */
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  left: 0;
+  transition: .5s;
+  /* transform: translateX(-115px); */
+  
+  
+}
+
+.slideBoxOfTeamImageBox{
+ 
+  /* border: solid 1px blue;   */
+  height: 69%;
+  width: 23%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 5;
+
+}
+
+#leftSlideBoxOfTeamImageBox{
+  left: 5.5%;
+}
+
+#rightSlideBoxOfTeamImageBox{
+  right: 5.5%;
+}
+
+.memberImage{
+  /* border: solid 1px red; */
+  height: 100%;
+  width: 115px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 0px;
+  transition: .5s;
+  transform: translateX(0%);
+}
+
+.memberImage img{
+  transition: .5s;
+  
+}
+
+.smallBoxOfImagesOfTeamMembers img{
+  border-radius: 50%;
+  height: 70%;
+  cursor: pointer;
+}
+
+/* making class id clicked image border */
+#bigImageOfTeamMember{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: solid 3px #ed0f0f;
+}
+
+/* tema members name */
+.nameAndPostOfTeamMembers{
+  /* border: solid 1px blue; */
+  margin-top: 20px;
+  width: 10%;
+  height: 16%;
+  position: relative;
+}
+
+.nameAndPostOfTeamMember{
+  /* border: solid black 1px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+
+  opacity: 0;
+  transition: .5s;
+  transition-delay: .1s;
+ 
+}
+
+.nameAndPostOfTeamMember h5{
+  color: #ed0f0f;
+  font-size: 16px;
+}
+
+.nameAndPostOfTeamMember span{
+  color: rgb(129, 129, 129);
+}
+
+
+
+/* blog container styling is here */
+
+.blogContainer{
+  /* border: solid 1px black; */
+  
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  
+}
+
+#headingOfBlog{
+  margin-top: 0;
+}
+
+#leftArrowOfBlogContainer,#rightArrowOfBlogContainer{
+  opacity: 0;
+  transition: .3s;
+ 
+}
+
+#leftArrowOfBlogContainer:hover ,#rightArrowOfBlogContainer:hover{
+  color: #ed0f0f;
+  border-color: #ed0f0f;
+  transition: none;
+}
+
+.blogContainer:hover #leftArrowOfBlogContainer, .blogContainer:hover #rightArrowOfBlogContainer{
+  opacity: 1;
+}
+
+.blogImagesArrowsContainer{
+  width: 100%;
+  height: 430px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+
+.ShowblogImagesContainer{
+  overflow: hidden;
+  width: 92%;
+  height: 100%;
+  position: relative;
+  
+}
+
+.slideContainerOfBlogImages{
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: auto;
+  display: flex;
+  transition: .7s;
+
+}
+
+.blogImageBox{
+  margin: 15px 15px 0 15px;
+  width: 435px;
+}
+
+/* image container... */
+.imageContainerBlog{
+  width: 100%;
+  height: 71.4%;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.imageContainerBlog img{
+  width: 100%;
+  height: 100%;
+  transition: .7s;
+}
+
+.blogImageBox:hover .imageContainerBlog img{
+  transform: scale(1.1);
+}
+
+.showImages{
+  /* border: solid 1px red; */
+  width: 21%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 1;
+  transition: .1s;
+
+}
+
+.blogImageBox:hover .showImages{
+  opacity: 1;
+}
+
+.showImages span{
+  border: solid white 2px;
+  color: white;
+  padding: 8px;
+  cursor: pointer;
+  transition: .2s;
+  font-size: 20px;
+}
+
+.showImages span:hover{
+  background-color: #ed0f0f;
+  border-color: #ed0f0f;
+}
+
+/* this will apear when hover on image container blog */
+.imageContainerBlogDarkFront{
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.315);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: .1s;
+}
+
+.blogImageBox:hover .imageContainerBlogDarkFront{
+  opacity: 1;
+}
+
+.blogImageBox p{
+  color: #ed0f0f;
+  font-size: 16px;
+  font-weight: 100;
+  margin: 10px 0;
+}
+
+.blogImageBox a{
+
+  text-decoration: none;
+}
+
+.blogImageBox h4{
+  font-size: 16px;
+  color: #000;
+}
+
+.blogImageBox a:hover h4{
+  color: #ed0f0f;
+}
+
+
+/* background of blog images */
+
+.backgroundOfBlogImages{
+  background-color: rgba(0, 0, 0, 0.795);
+  position: absolute;
+  top: 0;
+  z-index: 999;
+  height: 7083px;
+  width: 100%;
+  transition: .5s;
+  display: none;
+  opacity: 0;
+}
+
+.bigContainerOfBlogImagesAndIcon{
+  /* border: solid 1px red; */
+  position: absolute;
+  top: 5950px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.BlogImagesContainerWithArrow{
+  border: solid 4px white;
+  background-color: white;
+  border-radius: 4px;
+  display: flex;
+  position: relative;
+  width: 915px;
+  height: 618px;
+  
+}
+
+span.arrowOfBlogImagesContainer{
+  position: absolute;
+  top: 0%;
+  
+  color: white;
+  /* border: rgb(201, 50, 50) solid 1px; */
+  z-index: 100;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  font-size: 90px;
+  font-weight: 100;
+  cursor: pointer;
+  text-shadow: 00px 0 13px rgb(49, 49, 49) ;
+  opacity: 0;
+  transition: .7s;
+}
+
+span.arrowOfBlogImagesContainer:hover{
+  opacity: 1;
+}
+
+#rightArrowOfBlogImagesShowModel{
+  right: 0;
+  justify-content: flex-end;
+  
+}
+
+.BlogImagesContainerWithArrow img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+}
+
+/* after blog images */
+.afterBlogImages{
+  /* border: red solid 1px; */
+  width: 915px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.imageNumber{
+  margin-top: 5px;
+}
+
+.imageNumber h5{
+  color: rgb(235, 235, 235);
+  font-size: 13px;
+  text-transform: none;
+  letter-spacing: .4px;
+  font-weight: 100;
+  
+}
+.imageNumber p{
+  color: #999;
+  font-size: 13.5px;
+}
+
+.afterBlogImages .closeOfBlog{
+  /* border: solid 1px white; */
+  font-size: 41px;
+  color: rgb(161, 161, 161);
+  cursor: pointer;
+}
+
+/* footer styling.... */
+.footer{
+  background-color: #222;
+  padding-top: 80px;
+}
+
+/* hover for all because all hover are same */
+.footer a:hover, .listsInFooter li:hover, #submitEmail span:hover, .socialMediaLogos i:hover{
+  transition: .2s;
+  color: #ed0f0f;
+}
+
+/* contacts and other things */
+.contactAndOthers{
+  
+  border-bottom: solid rgb(87, 87, 87) 1px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 310px;
+  padding: 0 70px;
+}
+
+.headingInFooter{
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: .5px;
+  color: #fff;
+}
+
+.underlineOFFooterHeading{
+  margin-top: 9px;
+  margin-bottom: 22px;
+  height: 2px;
+  width: 60px;
+  background-color: #ed0f0f;
+}
+
+.containerOfcontact{
+  /* border: solid 1px red; */
+  display: flex;
+  margin-bottom: 15px;
+
+}
+
+.containerOfcontact p{
+  line-height: 30px;
+  width: 260px;
+  color: #cccccc;
+}
+
+.containerOfcontact .logosIncontacts{
+  color: #fff;
+  font-weight: 100;
+  font-size: 23px;
+  margin-right: 10px;
+  /* border: solid red 1px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.containerOfcontact .locationLogo{
+  padding-bottom: 25px;
+}
+
+.mailToCompany{
+  color: #cccccc;
+  text-decoration: none;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+/* lists in footer */
+.listsInFooter{
+  /* border: solid 1px greenyellow; */
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.listsInFooter a{
+  text-decoration: none;
+  /* border: solid 1px greenyellow; */
+}
+
+.listsInFooter li{
+  /* border: solid 1px red; */
+  list-style: none;
+  color: #cccccc;
+  margin-bottom: 14px;
+  width: auto;
+  display: inline-block;
+  
+}
+
+/* our news letter in footer */
+.ourNewsLetter p{
+  text-transform: none;
+  color: #cccccc;
+  font-size: 15px;
+  line-height: 26px;
+  text-align: left;
+  width: 333px;
+  margin-bottom: 19px;
+}
+
+.enterEmail{
+  background-color: whitesmoke;
+  width: 100%;
+  height: 40px;
+  overflow: hidden;
+  padding-left: 18px;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 19px;
+
+}
+
+#email{
+  height: 100%;
+  width: 257px;
+  outline: none;
+  border: 0px ;
+  background-color: transparent;
+  font-size: 17px;
+}
+
+#submitEmail{
+  /* border: solid red 1px; */
+  cursor: pointer;
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#submitEmail span{
+  cursor: pointer;
+  font-size: 28px;
+  color: #000;
+}
+
+/* play and app store */
+.playAndAppStore a{
+  text-decoration: none;
+}
+
+.playAndAppStore img{
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* last footer  social media and other*/
+.socialMediaAndCards{
+  /* border: solid red 1px; */
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
+
+}
+
+
+.socialMediaLogos i{
+  /* border: solid 1px white; */
+  color: #cccccc;
+  font-size: 20px;
+  margin-right: 16px;
+}
+
+.socialMediaAndCards a{
+  text-decoration: none;
+  color: #cccccc;
+}
+
+.pamentCards img{
+  margin-left: 7px;
+
+}
+
